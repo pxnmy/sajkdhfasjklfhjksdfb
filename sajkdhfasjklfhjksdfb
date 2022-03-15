@@ -1,0 +1,231 @@
+        -- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local frame = Instance.new("ImageLabel")
+local Frame = Instance.new("Frame")
+local PlayerName = Instance.new("TextBox")
+local Loop = Instance.new("TextButton")
+local LoopAll = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local Open = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Close = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ScreenGui.DisplayOrder = 9999999
+
+frame.Name = "frame"
+frame.Parent = ScreenGui
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BorderSizePixel = 0
+frame.Position = UDim2.new(0.409000009, 0, -0.99000001, 0)
+frame.Size = UDim2.new(0, 248, 0, 361)
+frame.Image = "rbxassetid://6809156437"
+
+Frame.Parent = frame
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(-0.00181939639, 0, -0.00178289413, 0)
+Frame.Size = UDim2.new(0, 248, 0, 361)
+
+PlayerName.Name = "Player Name"
+PlayerName.Parent = Frame
+PlayerName.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PlayerName.BorderColor3 = Color3.fromRGB(173, 173, 173)
+PlayerName.BorderSizePixel = 3
+PlayerName.Position = UDim2.new(0.0623033643, 0, 0.0664819926, 0)
+PlayerName.Size = UDim2.new(0, 217, 0, 50)
+PlayerName.Font = Enum.Font.Merriweather
+PlayerName.Text = "Player Name"
+PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.TextScaled = true
+PlayerName.TextSize = 14.000
+PlayerName.TextWrapped = true
+
+Loop.Name = "Loop"
+Loop.Parent = Frame
+Loop.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Loop.BackgroundTransparency = 0.750
+Loop.BorderColor3 = Color3.fromRGB(85, 170, 255)
+Loop.BorderSizePixel = 2
+Loop.Position = UDim2.new(0.137096778, 0, 0.310249299, 0)
+Loop.Size = UDim2.new(0, 179, 0, 50)
+Loop.Font = Enum.Font.FredokaOne
+Loop.Text = "Loop"
+Loop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Loop.TextScaled = true
+Loop.TextSize = 14.000
+Loop.TextWrapped = true
+
+LoopAll.Name = "Loop All"
+LoopAll.Parent = Frame
+LoopAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LoopAll.BackgroundTransparency = 0.750
+LoopAll.BorderColor3 = Color3.fromRGB(85, 170, 255)
+LoopAll.BorderSizePixel = 2
+LoopAll.Position = UDim2.new(0.137096778, 0, 0.531855941, 0)
+LoopAll.Size = UDim2.new(0, 179, 0, 50)
+LoopAll.Font = Enum.Font.FredokaOne
+LoopAll.Text = "Loop All"
+LoopAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoopAll.TextScaled = true
+LoopAll.TextSize = 14.000
+LoopAll.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextLabel.BackgroundTransparency = 0.500
+TextLabel.Position = UDim2.new(0, 0, 0.861495852, 0)
+TextLabel.Size = UDim2.new(0, 248, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "A Basic No glove loop Gui Made By David"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 14)
+UICorner.Parent = TextLabel
+
+UICorner_2.CornerRadius = UDim.new(0, 14)
+UICorner_2.Parent = frame
+
+Open.Name = "Open"
+Open.Parent = ScreenGui
+Open.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+Open.BackgroundTransparency = 0.500
+Open.Position = UDim2.new(0.90315479, 0, 0.94040525, 0)
+Open.Size = UDim2.new(0, 141, 0, 50)
+Open.Font = Enum.Font.Nunito
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 0, 0)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+Open.MouseButton1Click:connect(function()
+	Close.Visible = true
+	Open.Visible = false
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 53425)
+UICorner_3.Parent = Open
+
+Close.Name = "Close"
+Close.Parent = ScreenGui
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 127)
+Close.Position = UDim2.new(-0.00733675715, 0, -0.0214541126, 0)
+Close.Size = UDim2.new(0, 48, 0, 50)
+Close.Font = Enum.Font.PatrickHand
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.Visible = false
+Close.MouseButton1Click:connect(function()
+Close.Visible = false
+Open.Visible = true
+end)
+
+UICorner_4.CornerRadius = UDim.new(0, 12341234)
+UICorner_4.Parent = Close
+
+UITextSizeConstraint.Parent = Close
+UITextSizeConstraint.MaxTextSize = 50
+
+-- Scripts:
+
+local function NUMUH_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	frame = script.Parent.frame
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(NUMUH_fake_script)()
+local function BYZYDYT_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local frame = script.parent.frame
+	local Open =script.parent.Open
+	
+	Open.MouseButton1Up:Connect(function()
+		-- Open Inventory
+	
+		    frame:TweenPosition(
+			UDim2.new(-0, 0, 0.569, 0), -- end Position 
+			"In", -- Easing Direction
+			"Bounce", -- Easing Style
+			1.5, -- Time In Seconds
+			false -- Override Any Other Tweens
+		)
+	end)
+	
+end
+coroutine.wrap(BYZYDYT_fake_script)()
+local function MURSHU_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local frame = script.parent.frame
+	local Close =script.parent.Close
+	
+	Close.MouseButton1Up:Connect(function()
+		-- Open Inventory
+	
+		frame:TweenPosition(
+			UDim2.new(0.409, 0, -0.99, 0), -- end Position 
+			"In", -- Easing Direction
+			"Back", -- Easing Style
+			2.5, -- Time In Seconds
+			true -- Override Any Other Tweens
+		)
+	end)
+	
+end
+coroutine.wrap(MURSHU_fake_script)()
+
+Loop.MouseButton1Click:connect(function()
+
+	local field = PlayerName.Text
+
+	local LocalUser = game.Players.LocalPlayer
+	local ENEMY = field
+
+	for i = 1,4000 do
+		game.ReplicatedStorage.Remotes.Human_Punch:FireServer(LocalUser.Character.RightHand, "RightPunch", workspace[ENEMY].UpperTorso,5,true,"RightPunch",game.Players.LocalPlayer.Backpack.Boxing.Handle.Hit,5)
+		wait()
+	end
+end)
+
+PlayerName.FocusLost:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+		if (string.sub(string.lower(v.Name),1,string.len(PlayerName.Text))) == string.lower(PlayerName.Text) then
+			PlayerName.Text = v.Name
+		end
+	end
+end)
+
+LoopAll.MouseButton1Click:connect(function()
+	local children = game.Players:GetChildren()
+
+	local LocalUser = game.Players.LocalPlayer
+	local NAME = game.Players.LocalPlayer.Name
+	for i = 1, #children do
+		if(children[i].Name ~= NAME) then
+			for a = 1,100 do
+				game.ReplicatedStorage.Remotes.Human_Punch:FireServer(LocalUser.Character.LeftHand, "LeftPunch", children[i].Character.LeftHand, 5, true, "RightPunch", LocalUser.Character.Boxing.Handle.Hit, 5)
+			end
+		end
+	end
+end)
